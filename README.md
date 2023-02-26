@@ -1,8 +1,7 @@
 # AlocaTurmaEmSalas
 Projeto Final da Disciplina de Programação Orientada a Objetos
 
-## Projeto - Verificação Suplementar
-Este trabalho é individual e corresponde à verificação suplementar (VS) da disciplina de Programação Orientada a Objetos de 2020.2.
+## Projeto 
 ### Descrição
 O objetivo deste projeto é desenvolver um programa em Java que implemente um sistema simples para alocação de salas de aula para turmas dos cursos de graduação da UFF. Não precisa obter dados do usuário. Os dados virão de arquivos que estão disponíveis pelos links no codeHS ou repl.it.
 
