@@ -1,0 +1,19 @@
+Código,Turma,Nome,Departamento,Curso,Professor,Tipo,Vagas,Equipamento,Quantidade
+TET00123,A1,Introdução à Engenharia de Telecomunicações,TET,Engenharia de Telecomunicações,Maria,teórica,40,,
+TET00124,A1,Redes Locais e de Acesso,TET,Engenharia de Telecomunicações,José,teórica,40,,
+GMA00123,B1,Cálculo I-A,GMA,Matemática,João,teórica,50,,
+GMA00123,A1,Cálculo I-A,GMA,Matemática,Ana,teórica,50,,
+GMA00123,D1,Cálculo I-A,GMA,Engenharia de Telecomunicações,João,teórica,50,,
+GMA00123,C1,Cálculo I-A,GMA,Física,Luiz,teórica,50,,
+GET00123,A1,Geometria Analítica,GET,Matemática,Bruna,teórica,40,,
+GET00123,B1,Geometria Analítica,GET,Matemática,Bruna,teórica,40,,
+GET00123,C1,Geometria Analítica,GET,Engenharia de Telecomunicações,Bruna,teórica,40,,
+TCC00123,A1,Programação de Computadores,TCC,Engenharia de Telecomunicações,Paulo,prática,30,computador,20
+TCC00123,B1,Programação de Computadores,TCC,Engenharia Mecânica,Paulo,prática,40,computador,20
+GFI00011,A1,Física Experiemental,GFI,Física,Márcia,prática,20,equipamento de física mecânica,10
+GFI00011,B1,Física Experiemental,GFI,Engenharia Mecânica,Tiago,prática,20,equipamento de física mecânica,10
+TDT00011,A1,Desenho Técnico,TDT,Engenharia Civil,Sérgio,prática,30,mesa de desenho,30
+TDT00011,B1,Desenho Técnico,TDT,Engenharia Mecânica,Sérgio,prática,30,mesa de desenho,30
+TEE00222,A1,Eletrônica I,TEE,Engenharia Elétrica,Cláudia,prática,20,eletrônica,20
+TEE00222,B1,Eletrônica I,TEE,Engenharia Elétrica,Cláudia,prática,20,eletrônica,20
+TEE00222,C1,Eletrônica I,TEE,Engenharia Mecânica,Ricardo,prática,20,eletrônica,10
