@@ -19,7 +19,6 @@ public class Sala {
 	private boolean IsLab;
 
 	Sala(String unidade, String campus, String predio, String bloco, int andar, int nSala, int capacidadeSala) {
-
 		this.unidade = unidade;
 		this.campus = campus;
 		this.predio = predio;
@@ -28,11 +27,9 @@ public class Sala {
 		this.nSala = nSala;
 		this.capacidadeSala = capacidadeSala;
 		this.IsLab = false;
-
 	}
 
-	Sala(String unidade, String campus, String predio, String bloco, int andar, int nSala, int capacidadeSala,
-			String equipamento, int equipamentoQtd) {
+	Sala(String unidade, String campus, String predio, String bloco, int andar, int nSala, int capacidadeSala,String equipamento, int equipamentoQtd) {
 		this.unidade = unidade;
 		this.campus = campus;
 		this.predio = predio;
@@ -47,12 +44,6 @@ public class Sala {
 
 	public String getEquipamento() {
 		return equipamento;
-	}
-
-
-
-	public Sala() {
-		
 	}
 
 	public int getnSala() {
@@ -77,30 +68,20 @@ public class Sala {
 		return IsLab;
 	}
 
-
-	
-
 	public static <T> ArrayList<Sala> obterSalas() {
 
-		String path = "C:\\Users\\FrancieleBatistaDeOl\\eclipse-workspace\\AlocaTurmaEmSala\\src\\dados\\salas.csv";
+		String path = ".\dados\salas.csv";
 		File file = new File(path);
 
 		ArrayList<Sala> salas = new ArrayList<Sala>();
 
 		try {
 			Scanner leitor = new Scanner(file, "UTF-8");
-
 			String Linha1DoArq = leitor.nextLine();
-
 			while (leitor.hasNextLine()) {
-
 				String linhaDoArquivo = leitor.nextLine();
-				// System.out.println(linhaDoArquivo);
-
 				String[] infoDeSala = linhaDoArquivo.split("(,)");
-				// System.out.print(infoDeSala.length);
 				if (infoDeSala.length <= 7) {
-
 					String unidade = infoDeSala[0];
 					String campus = infoDeSala[1];
 					String predio = infoDeSala[2];
@@ -111,7 +92,6 @@ public class Sala {
 
 					Sala sala = new Sala(unidade, campus, predio, bloco, andar, nSala, capacidadeSala);
 					salas.add(sala);
-
 				} else {
 					String unidade = infoDeSala[0];
 					String campus = infoDeSala[1];
@@ -123,12 +103,10 @@ public class Sala {
 					String equipamento = infoDeSala[7];
 					int qntEquip = Integer.parseInt(infoDeSala[8]);
 
-					Sala sala = new Sala(unidade, campus, predio, bloco, andar, nSala, capacidadeSala, equipamento,
-							qntEquip);
+					Sala sala = new Sala(unidade, campus, predio, bloco, andar, nSala, capacidadeSala, equipamento,qntEquip);
 					salas.add(sala);
-
 				}
-				for (Sala s : salas) { System.out.println(s.getDescricaoSala() );}
+				for (Sala s : salas) { System.out.println(s.getDescricaoSala() );} 
 			}
 			leitor.close();
 
@@ -141,7 +119,7 @@ public class Sala {
 	
 	public String getDescricaoSala() {
 		return "	Numero: " + nSala + " - Andar:" + andar + " - Bloco: " + bloco 
-				+ "\n	Prédio: " + predio
+				+ "\n	PrÃ©dio: " + predio
 				+ " - Localizada em " + unidade + "-  Campus= " + campus 
 				+ "\n	Capacidade da Sala: " + capacidadeSala
 				+ "\n	Equipamento:" + qntEquip + "  " + equipamento;
