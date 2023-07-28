@@ -19,8 +19,7 @@ public class Turma {
 	private String equipamento;
 	private int qntEquip;
 
-	public Turma(String codigoTurmaDep, String codigoTurma, String disciplina, String departamentoVinc, String curso,
-			String professor, String tipo, int nVagas) {
+	public Turma(String codigoTurmaDep, String codigoTurma, String disciplina, String departamentoVinc, String curso, String professor, String tipo, int nVagas) {
 		this.codigoTurmaDep = codigoTurmaDep;
 		this.codigoTurma = codigoTurma;
 		this.disciplina = disciplina;
@@ -31,8 +30,7 @@ public class Turma {
 		this.nVagas = nVagas;
 	}
 
-	public Turma(String codigoTurmaDep, String codigoTurma, String disciplina, String departamentoVinc, String curso,
-			String professor, String tipo, int nVagas, String equipamento, int qntEquip) {
+	public Turma(String codigoTurmaDep, String codigoTurma, String disciplina, String departamentoVinc, String curso, String professor, String tipo, int nVagas, String equipamento, int qntEquip) {
 		super();
 		this.codigoTurmaDep = codigoTurmaDep;
 		this.codigoTurma = codigoTurma;
@@ -92,25 +90,19 @@ public class Turma {
 
 	public static ArrayList<Turma> obterTurmas() {
 
-		String path = "C:\\Users\\FrancieleBatistaDeOl\\eclipse-workspace\\AlocaTurmaEmSala\\src\\dados\\turmas.csv";
+		String path = ".\dados\turmas.csv";
 		File file = new File(path);
 
 		ArrayList<Turma> turmas = new ArrayList();
 
 		try {
 			Scanner leitor = new Scanner(file, "UTF-8");
-
 			String perimeiraLinhaDoArquivo = leitor.nextLine();
-
 			while (leitor.hasNextLine()) {
-
 				String linhaDoArquivo = leitor.nextLine();
-				// System.out.println(linhaDoArquivo);
-
 				String[] infoDeTurma = linhaDoArquivo.split("(,)|(,,)");
 
 				if (infoDeTurma.length >= 8) {
-
 					String codigoTurmaDep = infoDeTurma[0];
 					String codigoTurma = infoDeTurma[1];
 					String disciplina = infoDeTurma[2];
@@ -123,9 +115,7 @@ public class Turma {
 					Turma turma = new Turma(codigoTurmaDep, codigoTurma, disciplina, departamentoVinc, curso, professor,
 							tipo, nVagas);
 					turmas.add(turma);
-
 				} else {
-
 					String codigoTurmaDep = infoDeTurma[0];
 					String codigoTurma = infoDeTurma[1];
 					String disciplina = infoDeTurma[2];
@@ -139,16 +129,12 @@ public class Turma {
 					Turma turma = new Turma(codigoTurmaDep, codigoTurma, disciplina, departamentoVinc, curso, professor,
 							tipo, nVagas, equipamento, qntEquip);
 					turmas.add(turma);
-
 				}
 			}
 
 			System.out.println();
-
 			System.out.println("Lista de Todas as Turmas"); for (Turma t : turmas) {System.out.println(t.getDescricaoTurma() ); }
-
 			leitor.close();
-
 		} catch (FileNotFoundException e) {
 			System.out.println("Erro!");
 			System.out.println(e);
@@ -159,7 +145,7 @@ public class Turma {
 
 	
 	public String getDescricaoTurma() {
-		if (tipo.equals("teórica")) {
+		if (tipo.equals("teÃ³rica")) {
 		return "Turma: " + codigoTurmaDep + " (" + departamentoVinc + ") - " + codigoTurma + " Turma (" + tipo + ") "
 				+ "\n	Disciplina: " + disciplina 
 				+ "\n	Professor: " + professor 
